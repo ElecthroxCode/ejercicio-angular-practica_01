@@ -1,0 +1,9 @@
+<h2>{{title}}</h2>
+<br><br>
+<input type="text" placeholder="nombre" name="nombre" id="" [(ngModel)]="inputNombre"><br>
+<input type="text" placeholder="apellido" name="apellido" id="" [(ngModel)]="inputApellido"><br>
+<input type="text" placeholder="salario" name="salario" id="" [(ngModel)]="inputSalario"><br>
+<button (click)="agregarEmpleado()">Agregar</button>
+<br><br>
+<app-empleado-hijo-c *ngFor="let emple of arrayEmpleado; let i = index" [empleadoDeHijo] = "emple" [indice]= "i" ></app-empleado-hijo-c>
+

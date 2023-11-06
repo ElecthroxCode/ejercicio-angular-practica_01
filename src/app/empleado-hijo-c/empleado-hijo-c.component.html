@@ -1,0 +1,8 @@
+<ul>
+
+    <a [routerLink]="['/actualiza', indice]"><li>
+      {{indice+1}}. {{empleadoDeHijo.nombre}} {{empleadoDeHijo.apellido}} {{empleadoDeHijo.salario}}
+    </li></a>
+      <app-caracteristicas-empleado (caracteristicasEmpleado)="insertarArrayCaracteristicas($event)"></app-caracteristicas-empleado>
+      <ul style="list-style: none;"><li *ngFor="let caracteris of arrayCaracteristica">{{caracteris}}</li></ul>
+</ul>
